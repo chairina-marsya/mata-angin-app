@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 import TextGeneral from './styles';
 
-export default function Text(props) {
+export default function TextAtom(props) {
   const {
     size, children, weight, color, margin, visible,
     fontFamily, position, right, textAlign, fontStyle,
     // preWrap: to convert \n to line breaks
-    preWrap,
+    preWrap, padding,
   } = props;
 
   return (
@@ -24,13 +24,14 @@ export default function Text(props) {
       textAlign={textAlign}
       preWrap={preWrap}
       fontStyle={fontStyle}
+      padding={padding}
     >
       {children}
     </TextGeneral>
   );
 }
 
-Text.propTypes = {
+TextAtom.propTypes = {
   size: PropTypes.oneOf(['xxxs', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl']),
   weight: PropTypes.oneOf(['normal', 'lighter', 'semibold', 'bold']),
   color: PropTypes.string,
@@ -45,7 +46,7 @@ Text.propTypes = {
   fontStyle: PropTypes.string,
 };
 
-Text.defaultProps = {
+TextAtom.defaultProps = {
   size: 'sm',
   weight: 'normal',
   color: '#000000',

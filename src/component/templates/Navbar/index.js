@@ -6,11 +6,11 @@ import {
     Toolbar,
     IconButton,
 } from '@mui/material';
-import ButtonAtom from '../../atoms/Button';
 import { useLocation } from 'react-router-dom';
+import ButtonGroup from '../../molecules/ButtonGroup';
 
 
-export default function NavbarTemplate({onClick}) {
+export default function NavbarTemplate({buttonGroupData, onClick}) {
     /** Get Locations */
     const locations = useLocation();
     /** Get Pathname */
@@ -40,7 +40,14 @@ export default function NavbarTemplate({onClick}) {
           >
               <Styles.PlatformLogo />
           </IconButton>
-          {pathname === '/' && (<ButtonAtom buttonText='Text'/>)}
+          {pathname === '/' && (
+          <ButtonGroup
+            display='row'
+            width='auto'
+            buttonGap='27px'
+            buttonGroup={buttonGroupData}
+            onClick={(id) => onClick(id)}
+          />)}
         </Toolbar>
       </AppBar>
     </Box>

@@ -15,8 +15,10 @@ const buttonUi = (values, onClick) => (
     width={values.width}
     height={values.height}
     fontSize={values.fontSize}
+    btncolor={values.btncolor}
+    bordercolor={values.bordercolor}
     disabled={values.disabled}
-    onClick={() => onClick(values.id)}
+    onClick={onClick}
   />
 );
 

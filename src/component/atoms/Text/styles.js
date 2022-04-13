@@ -29,6 +29,7 @@ const TextGeneral = styled.p`
   color: ${({ color }) => color};
   font-family: ${({ fontFamily }) => fontFamily};
   margin: ${({ margin }) => margin || '0'};
+  padding: ${({ padding }) => padding || '0'};
   visibility: ${({ visible }) => {
     if (visible) {
       return 'visible';

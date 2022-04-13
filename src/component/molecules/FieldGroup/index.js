@@ -4,7 +4,7 @@ import * as Styles from './styles';
 
 import ButtonAtom from '../../atoms/Button';
 import CheckboxAtom from '../../atoms/Checkbox';
-import Text from '../../atoms/Text';
+import TextAtom from '../../atoms/Text';
 import InputField from '../../atoms/TextField';
 
 export default function FieldGroup({
@@ -39,9 +39,9 @@ export default function FieldGroup({
             break;
           case 'text':
             ui = (
-              <Text size="md" weight={data.fontWeight ? data.fontWeight : 'bold'} margin={data.margin}>
+              <TextAtom size="md" weight={data.fontWeight ? data.fontWeight : 'bold'} margin={data.margin}>
                 {data.label}
-              </Text>
+              </TextAtom>
             );
             break;
           case 'checkbox':
