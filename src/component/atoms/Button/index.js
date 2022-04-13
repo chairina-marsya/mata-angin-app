@@ -19,7 +19,7 @@ export default function ButtonAtom({
 }) {
 
 const sx = {
-    width: width || 'auto',
+    width,
     height: height || 'auto',
     fontSize: fontSize || 'auto',
     color,
