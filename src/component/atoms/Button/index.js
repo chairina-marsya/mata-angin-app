@@ -1,7 +1,8 @@
-import React from 'react';
-import Button from '@mui/material/Button';
+import React from "react";
+import Button from "@mui/material/Button";
 
 export default function ButtonAtom({
+=======
     id,
     variant, //outlined,contained,text
     color, //primary,secondary,success,error,info,warning,string
@@ -15,6 +16,7 @@ export default function ButtonAtom({
     disabled,
     onClick,
     buttonText,
+    fullWidth,
 }) {
 
 const sx = {
@@ -31,7 +33,7 @@ const sx = {
     },
 }
 
-return (
+  return (
     <Button
     id={id}
     variant={variant}
@@ -40,8 +42,9 @@ return (
     sx={sx}
     disabled={disabled}
     onClick={() => onClick(id)}
+    fullWidth={fullWidth}
     >
-        {buttonText}
+      {buttonText}
     </Button>
   );
 }
