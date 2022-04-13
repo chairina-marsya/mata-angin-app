@@ -95,23 +95,23 @@ return (
         </Carousel>
       <Styles.CardWrapper>
         {cardData && cardData?.map((item) => (
-          <Card sx={{border: '1px black', width: '359px', height: '450px', margin: '15px 10px'}}>
-            <img src={item.roleImgUrl} alt={`role ${item.id}`} style={{ width: '359px', height: '194px' }} />
+          <Card sx={{border: '1px black', width: '19.16%', height: '420px', marginTop: '20px', marginRight: item.id !== 'user-5' ? '15px' : null }}>
+            <img src={item.roleImgUrl} alt={`role ${item.id}`} style={{ width: '100%', height: '194px' }} />
             <Styles.ProfileSection>
               <div style={{display: 'flex', flexDirection: 'row' }}>
               <Avatar alt={`user ${item.id}`} src={item.userImgUrl}/>
               <div style={{ marginLeft: '20px' }}>
-                <TextAtom size='md' color='grey'>
+                <TextAtom size='xs' color='grey'>
                   {item.role}
                 </TextAtom>
-                <TextAtom size='xxl' color='black'>
+                <TextAtom size='md' color='black'>
                   {item.name}
                 </TextAtom>
               </div>
               </div>
               <ShareIcon />
             </Styles.ProfileSection>
-              <TextAtom padding='0px 15px 10px 15px' size='md' textAlign='justify' color='grey'>
+              <TextAtom padding='0px 15px 10px 15px' size='xs' textAlign='justify' color='grey'>
                 {item.review}
               </TextAtom>
             </Card>

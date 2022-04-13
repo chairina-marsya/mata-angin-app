@@ -33,6 +33,7 @@ export const CardWrapper = styled.div`
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 20px;
 `;
 
 export const ProfileSection = styled.div`
