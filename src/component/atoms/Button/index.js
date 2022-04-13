@@ -10,27 +10,36 @@ export default function ButtonAtom({
     width,
     height,
     fontSize,
+    btncolor,
+    bordercolor,
     disabled,
     onClick,
     buttonText,
 }) {
 
 const sx = {
-    width,
-    height,
-    fontSize,
+    width: width || 'auto',
+    height: height || 'auto',
+    fontSize: fontSize || 'auto',
+    color,
+    backgroundColor: btncolor,
+    border: `1px solid ${bordercolor}`,
+    '&:hover': {
+        color,
+        backgroundColor: btncolor,
+      border: `1px solid ${bordercolor}`,
+    },
 }
 
 return (
     <Button
     id={id}
     variant={variant}
-    color={color}
     startIcon={startIcon}
     endIcon={endIcon}
     sx={sx}
     disabled={disabled}
-    onClick={() => onClick}
+    onClick={() => onClick(id)}
     >
         {buttonText}
     </Button>
