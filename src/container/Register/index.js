@@ -19,7 +19,7 @@ const Register = () => {
   return (
     <Styles.Container>
       <Styles.ContainerLeft>
-        <Text weight="600" size="xxl" color={Color.darkGrey}>
+        <Text weight="600" size="xxl" color={Color.darkGrey} textAlign="center">
           Create your Mata Angin account
         </Text>
         <Styles.Form>

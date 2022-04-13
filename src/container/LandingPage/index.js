@@ -82,7 +82,7 @@ export default function LandingPage() {
 
 return (
     <Styles.Container>
-        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false}>
+        <Carousel autoPlay infiniteLoop showThumbs={false} showStatus={false} showArrows={false}>
           {carouselData && carouselData?.map((item) => (
             <Styles.CarouselWrapper bgColor={item.bgcolor}>
               <Styles.LeftWrapper>
