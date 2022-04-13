@@ -5,6 +5,7 @@ import InputField from "../../component/atoms/TextField";
 import { initialReg } from "../../helpers/data";
 import * as Styles from "./styles";
 import { useHistory } from "react-router-dom";
+import * as Color from "../../helpers/colors"
 
 const Register = () => {
   const history = useHistory();
@@ -18,7 +19,7 @@ const Register = () => {
   return (
     <Styles.Container>
       <Styles.ContainerLeft>
-        <Text weight="600" size="xxl">
+        <Text weight="600" size="xxl" color={Color.darkGrey}>
           Create your Mata Angin account
         </Text>
         <Styles.Form>

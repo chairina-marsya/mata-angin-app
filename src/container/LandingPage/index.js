@@ -78,8 +78,7 @@ export default function LandingPage() {
     roleImgUrl: 'https://images.pexels.com/photos/270360/pexels-photo-270360.jpeg',
     userImgUrl: 'https://images.pexels.com/photos/712513/pexels-photo-712513.jpeg',
     review: reviewDetail
-  },
-];
+  }];
 
 return (
     <Styles.Container>
@@ -94,11 +93,11 @@ return (
               </Styles.CarouselWrapper>
           ))}
         </Carousel>
-      <div style={{ display: 'flex', flexDirection: 'row', flexWrap: 'wrap', justifyContent: 'center'}}>
+      <Styles.CardWrapper>
         {cardData && cardData?.map((item) => (
           <Card sx={{border: '1px black', width: '359px', height: '450px', margin: '15px 10px'}}>
             <img src={item.roleImgUrl} alt={`role ${item.id}`} style={{ width: '359px', height: '194px' }} />
-            <div style={{display: 'flex', flexDirection: 'row', padding:'15px', justifyContent:'space-between', alignItems:'center'}}>
+            <Styles.ProfileSection>
               <div style={{display: 'flex', flexDirection: 'row' }}>
               <Avatar alt={`user ${item.id}`} src={item.userImgUrl}/>
               <div style={{ marginLeft: '20px' }}>
@@ -111,13 +110,13 @@ return (
               </div>
               </div>
               <ShareIcon />
-            </div>
+            </Styles.ProfileSection>
               <TextAtom padding='0px 15px 10px 15px' size='md' textAlign='justify' color='grey'>
                 {item.review}
               </TextAtom>
             </Card>
         ))}
-      </div>
+      </Styles.CardWrapper>
     </Styles.Container>
   );
 }

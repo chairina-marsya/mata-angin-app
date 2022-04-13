@@ -27,3 +27,18 @@ export const TitleText = styled.h1`
   font-size: 42px;
   text-align: left;
 `;
+
+export const CardWrapper = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+`;
+
+export const ProfileSection = styled.div`
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  justify-content: space-between;
+  align-items: center;
+`;

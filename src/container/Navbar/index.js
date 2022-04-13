@@ -2,8 +2,11 @@ import React from 'react';
 import NavbarTemplate from '../../component/templates/Navbar';
 
 import PersonIcon from '@mui/icons-material/Person';
+import { useHistory } from "react-router-dom";
+
 
 export default function Navbar() {
+    const history = useHistory();
 
     const buttonGroupData = [{
         id:'buttonRegistMentor',
@@ -34,7 +37,20 @@ export default function Navbar() {
     ];
 
     const onClick = (id) => {
-        console.log('test', id);
+        switch (id) {
+          case 'home':   
+            history.push("/");
+            break;
+          case 'buttonRegistration':   
+            history.push("/register");
+          break;
+          case 'buttonRegistMentor':
+          break;
+          case 'buttonLogin':
+          break;
+          default:
+            break;
+        }
     };
 
 return (
