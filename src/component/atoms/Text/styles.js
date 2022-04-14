@@ -18,6 +18,18 @@ const handleSize = (size) => {
       return '20px';
     case 'xxl':
       return '24px';
+    case '10px':
+      return '0.625rem';
+    case '14px':
+      return '0.875rem';
+    case '16px':
+      return '0.875rem';
+    case '18px':
+      return '1.125rem';
+    case '20px':
+      return '1.25rem';
+    case '24px':
+      return '1.5rem';
     default:
       return '34px';
   }

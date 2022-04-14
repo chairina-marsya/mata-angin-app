@@ -13,15 +13,17 @@ export default function FieldGroup({
     inputGap,
     margin,
     width,
-    inputData
+    direction,
+    inputData,
 }) {
-    const formUi = (type, data) => {
+    const formUi = (key, type, data) => {
         let ui = '';
         switch (type) {
           case 'input':
             ui = (
               <InputField
               id={data.id}
+              key={key}
               label={data.label}
               variant={data.variant}
               color={data.color}
@@ -39,7 +41,8 @@ export default function FieldGroup({
             break;
           case 'text':
             ui = (
-              <TextAtom size="md" weight={data.fontWeight ? data.fontWeight : 'bold'} margin={data.margin}>
+              <TextAtom id={data.id} key={key} size={data.fontSize}
+                color={data.color} textAlign={data.textAlign}>
                 {data.label}
               </TextAtom>
             );
@@ -48,6 +51,7 @@ export default function FieldGroup({
             ui = (
               <CheckboxAtom
               id={data.id}
+              key={key}
               label={data.label}
               icon={data.icon}
               checkedIcon={data.checkedIcon}
@@ -61,6 +65,7 @@ export default function FieldGroup({
             ui = (
               <ButtonAtom
                 id={data.id}
+                key={key}
                 buttonText={data.label}
                 variant={data.variant}
                 color={data.color}
@@ -70,12 +75,16 @@ export default function FieldGroup({
                 height={data.height}
                 fontSize={data.fontSize}
                 disabled={data.disabled}
+                fullWidth={data.fullWidth}
                 onClick={() => onClick(data.id)}
               />
             );
             break;
           case 'separator':
-            ui = <Styles.Separator width={data.width} />;
+            ui = <Styles.Separator id={data.id} key={key} width={data.width} />;
+            break;
+          case 'link':
+            ui = <a id={data.id} href={data.linkUrl}>{data.label}</a>;
             break;
           default:
             break;
@@ -88,6 +97,7 @@ export default function FieldGroup({
           gap={inputGap}
           margin={margin}
           width={width}
+          direction={direction}
         >
           {inputData.length > 0 && inputData.map((val, index) => {
             const key = `key${index}`;
@@ -108,6 +118,7 @@ FieldGroup.propTypes = {
       inputGap: PropTypes.string,
       margin: PropTypes.string,
       width: PropTypes.string,
+      direction: PropTypes.string,
 };
     
 FieldGroup.defaultProps = {
@@ -117,4 +128,5 @@ FieldGroup.defaultProps = {
       inputGap: '',
       margin: '',
       width: '100%',
+      direction: 'row',
 };

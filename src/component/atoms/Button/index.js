@@ -28,7 +28,7 @@ const sx = {
     '&:hover': {
         color,
         backgroundColor: btncolor,
-      border: `1px solid ${bordercolor}`,
+        border: `1px solid ${bordercolor}`,
     },
 }
 

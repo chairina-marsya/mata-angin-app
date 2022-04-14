@@ -9,7 +9,7 @@ export const Container = styled.div`
 export const ContainerLeft = styled.div`
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 40%;
   margin: 1rem;
   padding: 2rem;
   border: 1px solid ${grey};
@@ -20,9 +20,10 @@ export const ContainerLeft = styled.div`
 
 export const ContainerRight = styled.div`
   display: flex;
-  background-image: url(https://mataangin.org/_next/static/images/5-0bf588089820c9968bc0dcd9c13b06e1.jpg);
+  background-image: url(https://mataangin.org/_next/static/images/7-86026f48ee53cbcdc352e7f3f56e0f93.jpg);
   background-repeat: no-repeat;
-  width: 75%;
+  background-size: cover;
+  width: 60%;
 `;
 
 export const FormHorizontal = styled.div`
@@ -36,6 +37,6 @@ export const Form = styled.div`
   display: flex;
   width: 100%;
   flex-direction: column;
-  margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 `;

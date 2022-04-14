@@ -32,7 +32,11 @@ export default function TextAtom(props) {
 }
 
 TextAtom.propTypes = {
-  size: PropTypes.oneOf(['xxxs', 'xxs', 'xs', 'sm', 'md', 'lg', 'xl', 'xxl']),
+  size: PropTypes.oneOf([
+    'xxxs', 'xxs', 'xs', 'sm', 'md',
+    'lg', 'xl', 'xxl', '10px' ,'14px',
+    '16px','18px','20px', '24px',
+  ]),
   weight: PropTypes.oneOf(['normal', 'lighter', 'semibold', 'bold']),
   color: PropTypes.string,
   children: PropTypes.node,

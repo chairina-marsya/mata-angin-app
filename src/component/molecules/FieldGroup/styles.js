@@ -6,11 +6,11 @@ export const InputGroupContainer = styled.div`
   display: inline-flex;
   flex-wrap: wrap;
   gap: ${(props) => (props.gap ? props.gap : '20px 32px')};
+  flex-direction: ${(props) => (props.direction ? props.direction : 'row')};
 `;
 
 export const InputContainer = styled.div`
   width: auto;
-  height: 44px;
   display: flex;
   align-items: center;
   place-items: ${(props) => (props.placeItems ? props.placeItems : 'baseline')};

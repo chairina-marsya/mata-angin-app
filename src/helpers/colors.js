@@ -6,3 +6,4 @@ export const blue = "#3B72FF";
 export const orange = "#FFA800";
 export const grey = "#959494";
 export const darkGrey = "#808080";
+export const oldGrey = "#6A6868";
