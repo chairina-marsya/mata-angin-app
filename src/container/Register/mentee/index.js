@@ -1,19 +1,18 @@
-import React, { useState } from "react";
-import ButtonAtom from "../../component/atoms/Button";
-import Text from "../../component/atoms/Text";
-import InputField from "../../component/atoms/TextField";
-import { initialReg } from "../../helpers/data";
+import React, { useContext } from "react";
+import ButtonAtom from "../../../component/atoms/Button";
+import Text from "../../../component/atoms/Text";
+import InputField from "../../../component/atoms/TextField";
 import * as Styles from "./styles";
 import { useHistory } from "react-router-dom";
-import * as Color from "../../helpers/colors"
+import * as Color from "../../../helpers/colors";
+import { GlobalContext } from "../../../context/global";
 
-const Register = () => {
+const RegisterMentee = () => {
   const history = useHistory();
-  const [dataReg, setDataReg] = useState(initialReg);
+  const { dataMentee, setDataMentee } = useContext(GlobalContext);
 
   const handleButton = () => {
-    console.log(dataReg);
-    history.push("/");
+    history.push("/homepage");
   };
 
   return (
@@ -27,18 +26,18 @@ const Register = () => {
             <InputField
               fullWidth
               label="First Name"
-              value={dataReg.firstName}
+              value={dataMentee.firstName}
               onChange={(e) =>
-                setDataReg({ ...dataReg, firstName: e.target.value })
+                setDataMentee({ ...dataMentee, firstName: e.target.value })
               }
             />
             <InputField
               marginLeft={2}
               fullWidth
               label="Last Name"
-              value={dataReg.lastName}
+              value={dataMentee.lastName}
               onChange={(e) =>
-                setDataReg({ ...dataReg, lastName: e.target.value })
+                setDataMentee({ ...dataMentee, lastName: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -46,9 +45,9 @@ const Register = () => {
             <InputField
               fullWidth
               label="Email"
-              value={dataReg.email}
+              value={dataMentee.email}
               onChange={(e) =>
-                setDataReg({ ...dataReg, email: e.target.value })
+                setDataMentee({ ...dataMentee, email: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -58,9 +57,9 @@ const Register = () => {
               fullWidth
               label="Password"
               type="password"
-              value={dataReg.password}
+              value={dataMentee.password}
               onChange={(e) =>
-                setDataReg({ ...dataReg, password: e.target.value })
+                setDataMentee({ ...dataMentee, password: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -70,9 +69,12 @@ const Register = () => {
               fullWidth
               label="Confirm Password"
               type="password"
-              value={dataReg.confirmPassword}
+              value={dataMentee.confirmPassword}
               onChange={(e) =>
-                setDataReg({ ...dataReg, confirmPassword: e.target.value })
+                setDataMentee({
+                  ...dataMentee,
+                  confirmPassword: e.target.value,
+                })
               }
             />
           </Styles.FormHorizontal>
@@ -80,9 +82,9 @@ const Register = () => {
             <InputField
               fullWidth
               label="Address"
-              value={dataReg.address}
+              value={dataMentee.address}
               onChange={(e) =>
-                setDataReg({ ...dataReg, address: e.target.value })
+                setDataMentee({ ...dataMentee, address: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -91,9 +93,9 @@ const Register = () => {
               marginRight={1}
               fullWidth
               label="Gender"
-              value={dataReg.gender}
+              value={dataMentee.gender}
               onChange={(e) =>
-                setDataReg({ ...dataReg, gender: e.target.value })
+                setDataMentee({ ...dataMentee, gender: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -101,18 +103,18 @@ const Register = () => {
             <InputField
               fullWidth
               label="Education"
-              value={dataReg.education}
+              value={dataMentee.education}
               onChange={(e) =>
-                setDataReg({ ...dataReg, education: e.target.value })
+                setDataMentee({ ...dataMentee, education: e.target.value })
               }
             />
             <InputField
               marginLeft={2}
               fullWidth
               label="Graduation Year"
-              value={dataReg.graduationYear}
+              value={dataMentee.graduationYear}
               onChange={(e) =>
-                setDataReg({ ...dataReg, graduationYear: e.target.value })
+                setDataMentee({ ...dataMentee, graduationYear: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -120,18 +122,18 @@ const Register = () => {
             <InputField
               fullWidth
               label="Major"
-              value={dataReg.major}
+              value={dataMentee.major}
               onChange={(e) =>
-                setDataReg({ ...dataReg, major: e.target.value })
+                setDataMentee({ ...dataMentee, major: e.target.value })
               }
             />
             <InputField
               marginLeft={2}
               fullWidth
               label="University"
-              value={dataReg.university}
+              value={dataMentee.university}
               onChange={(e) =>
-                setDataReg({ ...dataReg, university: e.target.value })
+                setDataMentee({ ...dataMentee, university: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -139,9 +141,9 @@ const Register = () => {
             <InputField
               fullWidth
               label="Motivation"
-              value={dataReg.motivation}
+              value={dataMentee.motivation}
               onChange={(e) =>
-                setDataReg({ ...dataReg, motivation: e.target.value })
+                setDataMentee({ ...dataMentee, motivation: e.target.value })
               }
             />
           </Styles.FormHorizontal>
@@ -158,4 +160,4 @@ const Register = () => {
   );
 };
 
-export default Register;
+export default RegisterMentee;
