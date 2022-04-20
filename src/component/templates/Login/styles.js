@@ -14,7 +14,7 @@ export const Container = styled.div`
 `;
 
 export const FormDialog = styled.div`
-    width: 36%;
+    width: 33%;
     height: auto;
     margin-left: 2%;
     padding: 20px;

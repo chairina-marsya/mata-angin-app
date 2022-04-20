@@ -15,9 +15,11 @@ export default function NavbarTemplate({buttonGroupData, onClick}) {
     const locations = useLocation();
     /** Get Pathname */
     const { pathname } = locations;
+    /** Path name wothour header */
+    const noHeader = pathname.includes('/homepage');
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ display: noHeader ? 'none' : 'flex', flexGrow: 1, marginBottom: '4%' }}>
       <AppBar
         position='fixed'
         sx={{

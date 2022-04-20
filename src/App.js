@@ -10,21 +10,22 @@ import ContextProvider from "./context";
 
 import Login from "./container/Login";
 import HomePage from "./container/Home";
+import MenteeHomepage from "./container/MenteeHomepage";
 
 function App() {
+
   return (
     <Router>
       <ContextProvider>
         <Navbar />
-        <div style={{ marginTop: "4%" }}>
           <Switch>
             <Route exact path="/" component={LandingPage} />
             <Route path="/register-mentee" component={RegisterMentee} />
             <Route path="/register-mentor" component={RegisterMentor} />
             <Route path="/login" component={Login} />
+            <Route exact path="/homepage/mentee" component={MenteeHomepage} />
             <Route path="/homepage" component={HomePage} />
           </Switch>
-        </div>
       </ContextProvider>
     </Router>
   );
