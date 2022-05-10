@@ -1,12 +1,11 @@
 import React from 'react';
-import * as Styles from './styled';
 
-import ButtonAtom from '../../component/Button';
+import LandingPageTemplate from '../../component/templates/LandingPage';
+import { carouselData, cardData } from '../../utils/dummy/landingPageData';
 
 export default function LandingPage() {
+
 return (
-    <Styles.Container>
-        <ButtonAtom buttonText='Welcome to Mata Angin' />
-    </Styles.Container>
+    <LandingPageTemplate carouselData={carouselData} cardData={cardData}/>
   );
 }
