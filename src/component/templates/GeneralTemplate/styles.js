@@ -5,10 +5,10 @@ import mataAnginLogo from '../../../assets/mata-angin-logo.png'
 export const PlatformLogo = styled.div`
   background-image: url(${mataAnginLogo});
   width: 100%;
-  height: 12%;
-  margin: 0 12%;
+  height: 15%;
   background-repeat: no-repeat;
   background-size: contain;
+  background-position: center;
   object-fit: contain;
 `;
 
@@ -18,7 +18,7 @@ export const InnerProfile = styled.div`
   margin: 10px 0;
   padding: 10px;
   border-radius: 10px;
-  background-color: ${Color.blue};
+  background-color: ${(props) => (props.isDrawer ? Color.blue : 'transparent')};
 `;
 
 export const InnerUser = styled.div`
