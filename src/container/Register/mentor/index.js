@@ -22,15 +22,12 @@ const RegisterMentor = () => {
   };
 
   const handleButton = () => {
-    history.push("/homepage");
+    history.push("/course-mentor");
   };
 
   return (
     <Styles.Container>
       <Styles.ContainerLeft>
-        <Styles.ContainerBox />
-      </Styles.ContainerLeft>
-      <Styles.ContainerRight>
         <Styles.ContainerForm>
           <Text weight="800" size="10" color={darkGrey} textAlign="center">
             Apply as a Mentor
@@ -103,9 +100,8 @@ const RegisterMentor = () => {
                   }
                 />
               </Styles.FormHorizontal>
-              <Styles.FormHorizontal widthContainer="50%">
+              <Styles.FormHorizontal widthContainer="100%">
                 <InputField
-                  marginRight={1}
                   fullWidth
                   label="Gender"
                   value={dataMentor.gender}
@@ -204,7 +200,7 @@ const RegisterMentor = () => {
             </Styles.FormHorizontal>
           </Styles.Form>
         </Styles.ContainerForm>
-      </Styles.ContainerRight>
+      </Styles.ContainerLeft>
     </Styles.Container>
   );
 };

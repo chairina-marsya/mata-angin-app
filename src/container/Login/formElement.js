@@ -25,6 +25,7 @@ export const FormElement = [{
      key: 'inputPassword',
      label: 'Password',
      width: '100%',
+     type: 'password',
     }},
     {
     type: 'link',

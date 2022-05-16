@@ -3,14 +3,16 @@ import { grey } from "../../../helpers/colors";
 
 export const Container = styled.div`
   display: flex;
-  background-color: #fff;
+  background-color: #fff;;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export const ContainerLeft = styled.div`
   display: flex;
   flex-direction: column;
   width: 40%;
-  margin: 1rem;
+  margin: 2rem;
   padding: 2rem;
   border: 1px solid ${grey};
   border-radius: 10px;

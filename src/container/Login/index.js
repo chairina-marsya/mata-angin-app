@@ -1,21 +1,32 @@
-import React from "react";
+import React, { useContext } from "react";
 
 import LoginTemplate from '../../component/templates/Login';
 import { FormElement } from './formElement';
 import { useHistory } from "react-router-dom";
+import { GlobalContext } from "../../context/global";
 
 
 export default function Login() {
     const history = useHistory();
+    const { loginInfo, setLoginInfo } = useContext(GlobalContext);
 
-    const onChange = (id) =>{
-        console.log('id', id);
+    const onChange = (id, val) =>{
+        if (id=== 'inputEmail') setLoginInfo({ ...loginInfo, email: val })
+        if (id=== 'inputPassword') setLoginInfo({ ...loginInfo, password: val })
     }
     const onClick = (id) =>{
         console.log('click', id);
         switch (id) {
             case 'loginButton':
-                history.push('/homepage/mentee');
+                if (loginInfo.email.includes('admin') || loginInfo.email.includes('Admin')) {
+                    history.push('/dashboard-admin')
+                };
+                if (loginInfo.email.includes('mentor') || loginInfo.email.includes('Mentor')) {
+                    history.push('/course-mentor')
+                };
+                if (loginInfo.email.includes('mentee') || loginInfo.email.includes('Mentee')) {
+                    history.push('/course-mentee')
+                };
                 break;
         
             default:

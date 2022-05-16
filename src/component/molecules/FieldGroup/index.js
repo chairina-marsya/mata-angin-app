@@ -35,7 +35,8 @@ export default function FieldGroup({
               width={data.width}
               marginTop={data.marginTop ? data.marginTop : '8px'}
               inputProps={data.inputProps}
-              onChange={data.onChange}
+              onChange={(e) => onChange(data.id, e.target.value)}
+              type={data.type}
               />
             );
             break;

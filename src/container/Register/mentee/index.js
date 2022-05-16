@@ -12,7 +12,7 @@ const RegisterMentee = () => {
   const { dataMentee, setDataMentee } = useContext(GlobalContext);
 
   const handleButton = () => {
-    history.push("/homepage");
+    history.push("/course-mentee");
   };
 
   return (

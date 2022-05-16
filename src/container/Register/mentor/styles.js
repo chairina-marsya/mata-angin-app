@@ -1,25 +1,25 @@
 import styled from "styled-components";
-import { blue } from "../../../helpers/colors";
+import { blue, white } from "../../../helpers/colors";
 
 export const Container = styled.div`
   display: flex;
   background-color: ${blue};
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
 `;
 
 export const ContainerLeft = styled.div`
   display: flex;
   flex-direction: column;
-  width: 30%;
   justify-content: center;
   align-items: center;
+  width: 80%;
+  background-color: ${white};
 `;
 
-export const ContainerRight = styled.div`
+export const ContainerWrapper = styled.div`
   display: flex;
   background-size: cover;
-  width: 70%;
-  padding: 4rem 4rem 4rem 0rem;
 `;
 
 export const FormHorizontal = styled.div`
@@ -47,10 +47,13 @@ export const ContainerFile = styled.div`
 export const ContainerForm = styled.div`
   display: flex;
   flex-direction: column;
-  width: 100%;
   background-color: #fff;
-  padding: 2rem;
-  border-radius: 50px 0px 0px 50px;
+  border-radius: 50px;
+  padding: 4rem;
+  justify-content: center;
+  border: 1px solid gray;
+  width: 80%;
+  height: 70%;
 `;
 
 export const ContainerBox = styled.div`

@@ -32,15 +32,15 @@ export const CardWrapper = styled.div`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: ${(props) => (props.isCourse ? 'left' : 'center')};
   margin-bottom: 15px;
 `;
 
 export const ProfileSection = styled.div`
   display: flex;
   flex-direction: row;
-  padding: 15px;
-  justify-content: space-between;
+  padding: ${(props) => (props.isCourse ? '5px 15px' : '15px')};
+  justify-content: ${(props) => (props.isCourse ? 'left' : 'space-between')};
   align-items: center;
 `;
 

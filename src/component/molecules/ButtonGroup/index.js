@@ -19,6 +19,7 @@ const buttonUi = (values, onClick) => (
     bordercolor={values.bordercolor}
     disabled={values.disabled}
     onClick={onClick}
+    fullWidth={values.fullWidth}
   />
 );
 

@@ -11,6 +11,7 @@ export const initialRegMentee = {
   major: "",
   university: "",
   motivation: "",
+  role: "Mentee",
 };
 
 export const initialRegMentor = {
@@ -30,4 +31,10 @@ export const initialRegMentor = {
   exp: "",
   skill: "",
   motivation: "",
+  role: "Mentor",
+};
+
+export const userLoginInfo = {
+  email: "",
+  password: "",
 };
