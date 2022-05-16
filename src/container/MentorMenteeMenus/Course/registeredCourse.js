@@ -70,7 +70,7 @@ export default function RegisteredCourse() {
     <Styles.Container>
     <Styles.CardWrapper isCourse>
       {cardDataAdd && cardDataAdd?.map((item) => (
-        <Card sx={{border: '1px black', width: '15%', height: 'auto', marginTop: '20px', margin: '20px' }}>
+        <Card sx={{border: '1px black', width: '20%', height: 'auto', marginTop: '20px', margin: '20px' }}>
           <img src={item.roleImgUrl} alt={`role ${item.id}`} style={{ width: '100%', height: '250px' }} />
             <TextAtom padding='15px' size='xl' textAlign='justify' color='grey' weight='bold'>
               {item.role}

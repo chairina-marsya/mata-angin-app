@@ -31,7 +31,7 @@ const DetailCourseMentor = () => {
         onClick={() => {}}
         style={{
           width: '112px',
-          top: '40vh',
+          top: '42vh',
           left: '52.5vw',
           position: 'absolute',
           color:'transparent'
@@ -44,7 +44,7 @@ const DetailCourseMentor = () => {
         onClick={() => (setOpenModal(true))}
         style={{
           width: '112px',
-          top: '40vh',
+          top: '42vh',
           left: '59.5vw',
           position: 'absolute',
           color:'transparent'
@@ -57,7 +57,7 @@ const DetailCourseMentor = () => {
         onClick={() => (history.push('/join-course'))}
         style={{
         width: '280px',
-        top: '83vh',
+        top: '87vh',
         left: '18vw',
         position: 'absolute',
         color:'transparent'
@@ -70,7 +70,7 @@ const DetailCourseMentor = () => {
         onClick={() => (history.push('/recorded-course'))}
         style={{
           width: '280px',
-          top: '88vh',
+          top: '92vh',
           left: '18vw',
           position: 'absolute',
           color:'transparent'

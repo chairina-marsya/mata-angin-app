@@ -111,7 +111,7 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
     marginBottom: pathname !== '/'
     && pathname !== '/register-mentee' 
     && pathname !== '/register-mentor' 
-    && pathname !== '/login' ? '8%' : '4%' }}>
+    && pathname !== '/login' ? '18vh' : '4%' }}>
       <AppBar
         position='fixed'
         sx={{
@@ -149,7 +149,7 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
           && (
             <div>
               <InnerProfile>
-              <Search sx={{ color: '#969696', border: '1px solid gray', borderRadius:'10px', marginRight:'600px'}}>
+              <Search sx={{ color: '#969696', border: '1px solid gray', borderRadius:'10px', marginRight:'25vw'}}>
               <SearchIconWrapper>
                 <SearchIcon sx={{ color: '#969696', marginLeft: '5px' }}/>
               </SearchIconWrapper>
