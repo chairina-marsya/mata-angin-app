@@ -41,19 +41,8 @@ export default function Navbar() {
   
 
   const onClick = (id) => {
-// courseAdmin
-// discussionAdmin
-// feedbackAdmin
-// subsAdmin
-// userListAdmin
-// announAdmin
-// course
 // 
-// 
-// menteeList
-// mentorList
-// announcement
-// subsscription
+
     switch (id) {
       case "home":
         history.push("/");
@@ -93,6 +82,24 @@ export default function Navbar() {
       break;
       case "subscription":
         history.push("/subscription");
+      break;
+      case "userListAdmin":
+        history.push("/user-list");
+      break;
+      case "courseAdmin":
+        history.push("/course-admin");
+      break;
+      case "discussionAdmin":
+        history.push("/discussion-admin");
+      break;
+      case "feedbackAdmin":
+        history.push("/feedback-admin");
+      break;
+      case "subsAdmin":
+        history.push("/subscription-admin");
+      break;
+      case "announAdmin":
+        history.push("/announcement-admin");
       break;
       default:
         break;

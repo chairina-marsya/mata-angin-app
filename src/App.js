@@ -44,6 +44,13 @@ import DetailSubscription from "./container/MentorMenteeMenus/Subscription/detai
 import Payment from "./container/MentorMenteeMenus/Subscription/payment";
 import Invoice from "./container/MentorMenteeMenus/Subscription/paymentInvoice";
 
+import MentorMenteeList from "./container/AdminMenus/MentorMenteeList";
+import CourseAdmin from "./container/AdminMenus/CourseAdmin";
+import DiscussionAdmin from "./container/AdminMenus/DiscussionAdmin";
+import AnnouncementAdmin from "./container/AdminMenus/AnnouncementAdmin";
+import SubscriptionAdmin from "./container/AdminMenus/SubscriptionAdmin";
+import FeedbackAdmin from "./container/AdminMenus/FeedbackAdmin";
+
 function App() {
 
   return (
@@ -79,6 +86,12 @@ function App() {
             <Route path="/detail-subscription" component={DetailSubscription}/>
             <Route path="/payment" component={Payment}/>
             <Route path="/invoice" component={Invoice}/>
+            <Route path="/user-list" component={MentorMenteeList}/>
+            <Route path="/course-admin" component={CourseAdmin}/>
+            <Route path="/discussion-admin" component={DiscussionAdmin}/>
+            <Route path="/announcement-admin" component={AnnouncementAdmin}/>
+            <Route path="/subscription-admin" component={SubscriptionAdmin}/>
+            <Route path="/feedback-admin" component={FeedbackAdmin}/>
           </Switch>
       </ContextProvider>
     </Router>
