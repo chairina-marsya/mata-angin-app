@@ -174,7 +174,7 @@ export default function DiscussionAdmin() {
         '& .textPrimary': {
           color: 'text.primary',
         },
-        padding: '0 30px',
+        padding: '30px 30px',
       }}
     >
       <DataGridPro
