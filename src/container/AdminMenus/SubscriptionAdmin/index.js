@@ -64,9 +64,9 @@ function EditToolbar(props) {
       <TextAtom color="#969696" size='20px' weight='bold'>
         Subscription
       </TextAtom>
-      <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
+      {/* <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
         Add Subscription
-      </Button>
+      </Button> */}
     </GridToolbarContainer>
   );
 }

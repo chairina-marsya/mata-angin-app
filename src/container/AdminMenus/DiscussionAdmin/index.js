@@ -53,9 +53,9 @@ function EditToolbar(props) {
       <TextAtom color="#969696" size='20px' weight='bold'>
         Discussion
       </TextAtom>
-      <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
+      {/* <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
         Add Discussion
-      </Button>
+      </Button> */}
     </GridToolbarContainer>
   );
 }
