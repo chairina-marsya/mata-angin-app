@@ -18,6 +18,7 @@ import {
   randomId,
   randomCreatedDate,
 } from '@mui/x-data-grid-generator';
+import TextAtom from '../../../component/atoms/Text';
 
 const initialRows = [
   {
@@ -49,10 +50,13 @@ function EditToolbar(props) {
   };
 
   return (
-    <GridToolbarContainer sx={{ justifyContent:'right' }}>
-      <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
+    <GridToolbarContainer sx={{ justifyContent:'space-between' }}>
+      <TextAtom color="#969696" size='20px' weight='bold'>
+       Feedback
+      </TextAtom>
+      {/* <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
         Add Feedback
-      </Button>
+      </Button> */}
     </GridToolbarContainer>
   );
 }
@@ -188,9 +192,9 @@ export default function FeedbackAdmin() {
         onRowEditStart={handleRowEditStart}
         onRowEditStop={handleRowEditStop}
         processRowUpdate={processRowUpdate}
-        // components={{
-        //   Toolbar: EditToolbar,
-        // }}
+        components={{
+          Toolbar: EditToolbar,
+        }}
         componentsProps={{
           toolbar: { setRows, setRowModesModel },
         }}

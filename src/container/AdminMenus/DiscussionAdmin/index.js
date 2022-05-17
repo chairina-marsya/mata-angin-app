@@ -17,6 +17,7 @@ import {
 import {
   randomId,
 } from '@mui/x-data-grid-generator';
+import TextAtom from '../../../component/atoms/Text';
 
 const initialRows = [
   {
@@ -48,7 +49,10 @@ function EditToolbar(props) {
   };
 
   return (
-    <GridToolbarContainer sx={{ justifyContent:'right' }}>
+    <GridToolbarContainer sx={{ justifyContent:'space-between' }}>
+      <TextAtom color="#969696" size='20px' weight='bold'>
+        Discussion
+      </TextAtom>
       <Button color="primary" startIcon={<AddIcon />} onClick={handleClick}>
         Add Discussion
       </Button>
