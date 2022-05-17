@@ -112,19 +112,19 @@ export default function AnnouncementAdmin() {
   };
 
   const columns = [
-    { field: 'title', headerName: 'Title', width: 400, editable: true },
+    { field: 'title', headerName: 'Title', width: 350, editable: true },
     { field: 'category', headerName: 'Category', editable: true, width: 350 },
     {
       field: 'sendTo',
       headerName: 'Send To',
-      width: 400,
+      width: 200,
       editable: true,
     },
     {
       field: 'date',
       headerName: 'Created At',
       type: 'date',
-      width: 400,
+      width: 250,
       editable: true,
     },
     {

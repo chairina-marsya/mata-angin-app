@@ -105,7 +105,7 @@ export default function FeedbackAdmin() {
   };
 
   const columns = [
-    { field: 'feedback', headerName: 'Feedback', width: 500, editable: true },
+    { field: 'feedback', headerName: 'Feedback', width: 400, editable: true },
     {
       field: 'author',
       headerName: 'Author',
@@ -117,14 +117,14 @@ export default function FeedbackAdmin() {
       field: 'created',
       headerName: 'Created',
       type: 'date',
-      width: 300,
+      width: 250,
       editable: true,
     },
     {
       field: 'actions',
       type: 'actions',
       headerName: 'Actions',
-      width: 220,
+      width: 170,
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;

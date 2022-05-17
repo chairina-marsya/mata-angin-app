@@ -115,32 +115,32 @@ export default function SubscriptionAdmin() {
   };
 
   const columns = [
-    { field: 'mentee', headerName: 'Mentee', width: 400, editable: true },
-    { field: 'mentor', headerName: 'Mentor', editable: true, width: 350 },
+    { field: 'mentee', headerName: 'Mentee', width: 250, editable: true },
+    { field: 'mentor', headerName: 'Mentor', editable: true, width: 250 },
     {
       field: 'total',
       headerName: 'Total',
-      width: 300,
+      width: 200,
       editable: true,
     },
     {
       field: 'status',
       headerName: 'Status',
-      width: 300,
+      width: 200,
       editable: true,
     },
     {
       field: 'date',
       headerName: 'Expired At',
       type: 'date',
-      width: 300,
+      width: 250,
       editable: true,
     },
     {
       field: 'actions',
       type: 'actions',
       headerName: 'Actions',
-      width: 220,
+      width: 170,
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;

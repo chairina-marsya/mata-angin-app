@@ -111,26 +111,26 @@ export default function CourseAdmin() {
     {
       field: 'mentor',
       headerName: 'Mentor',
-      width: 300,
+      width: 250,
       editable: true,
     },
     {
       field: 'subscription',
       headerName: 'Subscription',
-      width: 300,
+      width: 250,
       editable: true,
     },
     {
       field: 'status',
       headerName: 'Status',
-      width: 300,
+      width: 250,
       editable: true,
     },
     {
       field: 'actions',
       type: 'actions',
       headerName: 'Actions',
-      width: 220,
+      width: 170,
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;

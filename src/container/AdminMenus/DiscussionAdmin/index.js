@@ -104,7 +104,7 @@ export default function DiscussionAdmin() {
   };
 
   const columns = [
-    { field: 'title', headerName: 'Title', width: 500, editable: true },
+    { field: 'title', headerName: 'Title', width: 400, editable: true },
     { field: 'category', headerName: 'Category', editable: true, width: 220 },
     {
       field: 'author',
@@ -115,14 +115,14 @@ export default function DiscussionAdmin() {
     {
       field: 'comments',
       headerName: 'Total Comments',
-      width: 300,
+      width: 250,
       editable: true,
     },
     {
       field: 'actions',
       type: 'actions',
       headerName: 'Actions',
-      width: 220,
+      width: 170,
       cellClassName: 'actions',
       getActions: ({ id }) => {
         const isInEditMode = rowModesModel[id]?.mode === GridRowModes.Edit;

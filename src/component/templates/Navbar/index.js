@@ -98,7 +98,7 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
 
     const handleMyCourse = () => {
       setAnchorEl(null);
-      role === 'Mentee' ? history.push('/registered-course') : history.push('/detail-course-mentor');
+      role === 'Mentee' ? history.push('/registered-course') : history.push('/course-mentor');
     };
 
     const handleMySchedule = () => {
