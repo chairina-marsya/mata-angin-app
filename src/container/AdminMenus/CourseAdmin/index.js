@@ -111,19 +111,19 @@ export default function CourseAdmin() {
     {
       field: 'mentor',
       headerName: 'Mentor',
-      width: 250,
+      width: 200,
       editable: true,
     },
     {
       field: 'subscription',
       headerName: 'Subscription',
-      width: 250,
+      width: 200,
       editable: true,
     },
     {
       field: 'status',
       headerName: 'Status',
-      width: 250,
+      width: 200,
       editable: true,
     },
     {
