@@ -28,7 +28,7 @@ const DetailCourseMentor = () => {
       <Container>
         <div
         id='1'
-        onClick={() => {}}
+        onClick={() => history.push('/edit-course')}
         style={{
           width: '112px',
           top: '42vh',

@@ -48,8 +48,8 @@ export default function Navbar() {
 // userListAdmin
 // announAdmin
 // course
-// discussion
-// feedback
+// 
+// 
 // menteeList
 // mentorList
 // announcement
@@ -75,6 +75,24 @@ export default function Navbar() {
       break;
       case "courseMentor":
         history.push("/course-mentor");
+      break;
+      case "menteeList":
+        history.push("/mentee-list");
+      break;
+      case "mentorList":
+        history.push("/mentor-list");
+      break;
+      case "discussion":
+        history.push("/discussion");
+      break;
+      case "feedback":
+        history.push("/feedback");
+      break;
+      case "announcement":
+        history.push("/announcement");
+      break;
+      case "subscription":
+        history.push("/subscription");
       break;
       default:
         break;

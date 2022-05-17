@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import * as Styles from '../../../component/templates/LandingPage/styles';
 
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+// import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Card } from '@mui/material';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PeopleIcon from '@mui/icons-material/People';
@@ -56,8 +56,6 @@ export default function Course() {
     setOpenModal(false)
     history.push('/registered-course');
   }
-
-  console.log(OpenModal);
 
   const onClick = (id) => {
     switch (id) {

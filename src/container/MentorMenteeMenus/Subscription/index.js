@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import * as Styles from '../../../component/templates/LandingPage/styles';
 
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
@@ -7,66 +7,76 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import PeopleIcon from '@mui/icons-material/People';
 import TextAtom from '../../../component/atoms/Text';
 import ButtonGroup from '../../../component/molecules/ButtonGroup';
-import BasicModal from '../../../component/organisms/Modal';
 import { useHistory } from 'react-router-dom';
-import ButtonAtom from '../../../component/atoms/Button';
 
-export default function MentorCourse() {
+export default function Subscription() {
   const history = useHistory();
-  const [OpenModal, setOpenModal] = useState(false);
 
   const buttonGroupData = [
     {
-      id:'preview',
-      label: 'Preview',
+      id:'1',
+      label: 'Rp 230.000',
       variant: 'filled',
-      color: 'white',
-      bordercolor: 'blue',
-      btncolor: 'blue',
+      btncolor:'#ECFFF8',
+      bordercolor:'rgba(10, 207, 131, 1)',
+      color:'rgba(10, 207, 131, 1)',
       fontSize: '14px',
-      fullWidth: true,
+      width: 'auto',
     },
+    {
+      id:'2',
+      label: 'in 3 Month',
+      variant: 'filled',
+      btncolor:'rgba(218, 238, 255, 1)',
+      bordercolor:'blue',
+      color:'blue',
+      fontSize: '14px',
+      width: 'auto',
+    },
+  ]
+
+  const buttonGroupData1 = [
+    {
+      id:'joinMeeting',
+      label: 'Subscription',
+      variant: 'filled',
+      btncolor:'rgba(10, 207, 131, 1)',
+      bordercolor:'rgba(10, 207, 131, 1)',
+      color:'white',
+      fontSize: '14px',
+      fullWidth: true
+    }
   ]
 
   const cardDataAll = [{
     id: 'user-1',
-    role: 'Data Analyst',
-    name: 'Remy Sharp',
-    subsNum: '123 Students',
-    roleImgUrl: 'https://images.pexels.com/photos/34600/pexels-photo.jpg',
+    role: 'Manager of Engineering',
+    name: 'Alex Ackerman',
+    subsNum: '320 Students',
+    roleImgUrl: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg',
+    buttons: buttonGroupData1,
+  },{
+    id: 'user-1',
+    role: 'Manager of Engineering',
+    name: 'Alex Ackerman',
+    subsNum: '320 Students',
+    roleImgUrl: 'https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg',
+    buttons: buttonGroupData1,
   },
-  {
-    id: 'user-2',
-    role: 'Data Analyst',
-    name: 'Remy Sharp',
-    subsNum: '123 Students',
-    roleImgUrl: 'https://images.pexels.com/photos/34600/pexels-photo.jpg',
-  }]
+]
 
   const onClick = (id) => {
     switch (id) {
-      case 'preview':
-        history.push('/detail-course-mentor');
+      case 'joinMeeting':
+        history.push('/detail-subscription');
         break;
       default:
         break;
     }
   }
 
-  const createCourse = () => {
-    history.push('/create-course');
-  } 
-
   return (
     <Styles.Container>
-    <div style={{display: 'flex', flexDirection:'row', gap: '20px', padding: '20px', justifyContent: 'flex-end'}}>
-      <ButtonAtom
-          onClick={() => (createCourse())}
-          buttonText="Create Course"
-          variant="contained"
-          width='auto'
-      />
-    </div>
     <Styles.CardWrapper isCourse>
       {cardDataAll && cardDataAll?.map((item) => (
         <Card sx={{border: '1px black', width: '20%', height: 'auto', marginTop: '20px', margin: '20px' }}>
@@ -92,9 +102,15 @@ export default function MentorCourse() {
             width='auto'
             buttonGap='27px'
             buttonGroup={buttonGroupData}
-            onClick={(id) => onClick(id)}
           />
           </div>
+          <ButtonGroup
+            display='row'
+            width='auto'
+            buttonGap='27px'
+            buttonGroup={item.buttons}
+            onClick={(id) => onClick(id)}
+          />
           </Card>
       ))}
     </Styles.CardWrapper>

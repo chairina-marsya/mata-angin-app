@@ -130,7 +130,7 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
             color='inherit'
             aria-label='home'
             sx={{ mr: 2 }}
-            onClick={() => onClick('home')}
+            onClick={() => handleLogout()}
           >
               <Styles.PlatformLogo />
           </IconButton>
@@ -164,7 +164,9 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
                 aria-label="show new notifications"
                 color="inherit"
                 sx={{ marginRight: '30px' }}
-              >
+                onClick={() => (
+                  history.push("/announcement"))}
+                >
                 <Badge badgeContent={2} color="error">
                   <NotificationsIcon sx={{ color: '#969696' }}/>
                 </Badge>
@@ -208,7 +210,7 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
                 <MenuItem onClick={handleClose}>My Account</MenuItem>
                 <MenuItem onClick={handleMyCourse}>My Course</MenuItem>
                 <MenuItem onClick={handleMySchedule}>My Schedule</MenuItem>
-                <MenuItem onClick={handleClose}>My Subscription</MenuItem>
+                <MenuItem onClick={handleMyCourse}>My Subscription</MenuItem>
                 <MenuItem onClick={handleLogout}>Logout</MenuItem>
               </Menu>
               ) : (

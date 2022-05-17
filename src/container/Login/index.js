@@ -15,7 +15,6 @@ export default function Login() {
         if (id=== 'inputPassword') setLoginInfo({ ...loginInfo, password: val })
     }
     const onClick = (id) =>{
-        console.log('click', id);
         switch (id) {
             case 'loginButton':
                 if (loginInfo.email.includes('admin') || loginInfo.email.includes('Admin')) {

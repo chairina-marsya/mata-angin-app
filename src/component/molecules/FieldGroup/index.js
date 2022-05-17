@@ -78,6 +78,7 @@ export default function FieldGroup({
                 disabled={data.disabled}
                 fullWidth={data.fullWidth}
                 onClick={() => onClick(data.id)}
+                bordercolor={data.color}
               />
             );
             break;

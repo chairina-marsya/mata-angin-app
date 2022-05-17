@@ -36,6 +36,13 @@ export const CardWrapper = styled.div`
   margin-bottom: 15px;
 `;
 
+export const NonCardWrapper = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: ${(props) => (props.isCourse ? 'left' : 'center')};
+  margin-bottom: 15px;
+`;
+
 export const ProfileSection = styled.div`
   display: flex;
   flex-direction: row;
