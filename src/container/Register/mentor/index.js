@@ -22,7 +22,7 @@ const RegisterMentor = () => {
   };
 
   const handleButton = () => {
-    history.push("/course-mentor");
+    history.push("/verification-mentee");
   };
 
   return (

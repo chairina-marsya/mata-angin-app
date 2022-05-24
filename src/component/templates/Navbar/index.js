@@ -106,6 +106,11 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
       history.push('/schedule');
     };
 
+    const handleMyAccount = () => {
+      setAnchorEl(null);
+      history.push('/my-profile');
+    };
+
   return (
     <Box sx={{ display: 'flex', flexGrow: 1,
     marginBottom: pathname !== '/'
@@ -207,7 +212,7 @@ export default function NavbarTemplate({buttonGroupUserData, buttonGroupData, us
                 }}
               >
                 <MenuItem onClick={handleClose}>Profile</MenuItem>
-                <MenuItem onClick={handleClose}>My Account</MenuItem>
+                <MenuItem onClick={handleMyAccount}>My Account</MenuItem>
                 <MenuItem onClick={handleMyCourse}>My Course</MenuItem>
                 <MenuItem onClick={handleMySchedule}>My Schedule</MenuItem>
                 <MenuItem onClick={handleMyCourse}>My Subscription</MenuItem>

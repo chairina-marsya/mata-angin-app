@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { grey } from "../../../helpers/colors";
+import RegistBgd from '../../../assets/regist_bg.png';
 
 export const Container = styled.div`
   display: flex;
@@ -22,7 +23,7 @@ export const ContainerLeft = styled.div`
 
 export const ContainerRight = styled.div`
   display: flex;
-  background-image: url(https://mataangin.org/_next/static/images/7-86026f48ee53cbcdc352e7f3f56e0f93.jpg);
+  background-image: url(${RegistBgd});
   background-repeat: no-repeat;
   background-size: cover;
   width: 60%;

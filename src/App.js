@@ -38,6 +38,10 @@ import Feedback from "./container/MentorMenteeMenus/Feedback";
 import CreateFeedback from "./container/MentorMenteeMenus/Feedback/createFeedback";
 
 import Announcement from "./container/MentorMenteeMenus/Announcement";
+import UserProfile from "./container/MentorMenteeMenus/UserProfile";
+import VerificationMentee from "./container/Register/mentee/verification";
+import VerificationMentor from "./container/Register/mentor/verification";
+import MyProfile from "./container/MentorMenteeMenus/MyProfile";
 
 import Subscription from "./container/MentorMenteeMenus/Subscription";
 import DetailSubscription from "./container/MentorMenteeMenus/Subscription/detailSubscription";
@@ -92,6 +96,10 @@ function App() {
             <Route path="/announcement-admin" component={AnnouncementAdmin}/>
             <Route path="/subscription-admin" component={SubscriptionAdmin}/>
             <Route path="/feedback-admin" component={FeedbackAdmin}/>
+            <Route path="/user-profile" component={UserProfile}/>
+            <Route path="/verification-mentee" component={VerificationMentee}/>
+            <Route path="/verification-mentor" component={VerificationMentor}/>
+            <Route path="/my-profile" component={MyProfile}/>
           </Switch>
       </ContextProvider>
     </Router>

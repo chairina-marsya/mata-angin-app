@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import LoginBgd from '../../../assets/login_bg.png';
 
 export const Container = styled.div`
     display: flex;
@@ -7,7 +8,7 @@ export const Container = styled.div`
     flex-direction: column;
     width: 100vw;
     height: 100vh;
-    background-image: url('https://mataangin.org/_next/static/images/1-8e228cbdad4884e76738ec8bd5844323.jpg');
+    background-image: url(${LoginBgd});
     background-repeat: no-repeat;
     background-size: 65% 100%;
     background-position: right;
